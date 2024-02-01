@@ -51,17 +51,20 @@ function removeTodoFromLocal(index) {
 }
 
 function submitTodo() {
-  const newTodoData = {
-    title: document.getElementById("new-todo").value,
-    completed: false,
-  };
+  const newTodoInput = document.getElementById("new-todo");
+  const newTodoValue = newTodoInput.value.trim();
 
-  if (newTodoData.title.trim() !== "") {
+  if (newTodoValue !== "") {
+    const newTodoData = {
+      title: newTodoValue,
+      completed: false,
+    };
+
     const existingTodos = JSON.parse(localStorage.getItem("todos")) || [];
     existingTodos.push(newTodoData);
     localStorage.setItem("todos", JSON.stringify(existingTodos));
     displayLocalTodos();
-    document.getElementById("new-todo").value = ""; // Clear the input field
+    newTodoInput.value = ""; // Clear the input field
   } else {
     alert("Please enter a valid to-do item.");
   }
