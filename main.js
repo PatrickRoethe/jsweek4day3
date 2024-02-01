@@ -1,5 +1,3 @@
-console.log("HEEEEY");
-
 let todoListElement = document.getElementById("todo-list");
 
 function fetchLocalTodos() {
