@@ -75,3 +75,42 @@ input[type="text"] {
     cursor: pointer; /* Cursor style on hover */
     margin-left: 5px; /* Add some spacing between the todo text and the button */
 }
+
+/* Custom style for the checkbox */
+#todo-list input[type="checkbox"] {
+    appearance: none;
+    border: 2px solid #4CAF50; /* Green border color */
+    width: 20px; /* Set the width of the checkbox */
+    height: 20px; /* Set the height of the checkbox */
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer;
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Style for the checked state of the checkbox */
+#todo-list input[type="checkbox"]:checked {
+    background-color: #4CAF50; /* Green background color when checked */
+    border-color: #4CAF50; /* Green border color when checked */
+    color: white; /* White checkmark color */
+}
+
+/* Position the checkbox and label side by side */
+#todo-list label {
+    margin-left: 10px; /* Adjust the spacing between the checkbox and label */
+}
+
+/* Style for completed to-do items */
+#todo-list input[type="checkbox"]:checked + label {
+    text-decoration: line-through; /* Add a line-through for completed items */
+    color: #888; /* Dim the text color for completed items */
+}
+
+#todo-list li.completed {
+    background-color: #e0f7e0; /* Light green background for completed items */
+    border: 1px solid #a3d2a3; /* Lighter green border for completed items */
+}
+
+#todo-list li:hover:not(.completed) {
+    background-color: #f5f5f5; /* Hover effect for pending items */
+}
+
