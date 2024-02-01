@@ -31,6 +31,10 @@ h1 {
     padding: 5px;
 }
 
+body .controls {
+  display: inline-flex;
+}
+
 /* Style for the button */
 button {
     background-color: #4CAF50; /* Green background color */
