@@ -18,6 +18,19 @@ h1 {
     
 }
 
+/* Filter and sort controls styles */
+.controls {
+    margin-bottom: 15px;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls select {
+    padding: 5px;
+}
+
 /* Style for the button */
 button {
     background-color: #4CAF50; /* Green background color */
