@@ -35,7 +35,13 @@ function createDeleteButton(index) {
   deleteButton.classList.add("delete-button");
 
   deleteButton.addEventListener("click", function () {
-    removeTodoFromLocal(index);
+    // Show a confirmation dialog
+    const confirmation = confirm("Are you sure you want to delete this to-do?");
+
+    // If the user confirms, proceed with deletion
+    if (confirmation) {
+      removeTodoFromLocal(index);
+    }
   });
 
   return deleteButton;
