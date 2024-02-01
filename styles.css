@@ -1,10 +1,16 @@
 /* Add your styles here */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: hwb(144 16% 27%);
     margin: 0;
     padding: 0;
     text-align: center;
+    display: column;
 }
 
 h1 {
