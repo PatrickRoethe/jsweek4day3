@@ -14,6 +14,14 @@
     <!-- Add an element with the ID "todo-list" -->
     <ul id="todo-list"></ul>
 
+    <!-- Form for submitting new to-do items -->
+    <form id="todo-form">
+        <label for="new-todo">New To-Do:</label>
+        <input type="text" id="new-todo" name="new-todo">
+        <!-- Fix the function name in the onclick attribute -->
+        <button type="button" onclick="submitTodo()">Add To-Do</button>
+    </form>
+
     <!-- Include your main.js script -->
     <script src="main.js"></script>
 </body>
