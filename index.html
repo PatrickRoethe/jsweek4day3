@@ -11,6 +11,22 @@
 <body>
     <h1>LIST</h1>
 
+    <!-- Filter and sort controls -->
+    <div class="controls">
+        <label for="filter">Filter:</label>
+        <select id="filter" onchange="applyFilters()">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+        </select>
+
+        <label for="sort">Sort:</label>
+        <select id="sort" onchange="applySort()">
+            <option value="date">Date Added</option>
+            <option value="alphabetical">Alphabetical Order</option>
+        </select>
+    </div>
+
     <!-- Add an element with the ID "todo-list" -->
     <ul id="todo-list"></ul>
 
