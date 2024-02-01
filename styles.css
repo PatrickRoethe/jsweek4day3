@@ -4,9 +4,75 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: teal;
 }
 
-h1  p {
+h1 {
     color: #333;
+}
+
+/* Style for the button */
+button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Form styles */
+form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+/* Todo list styles */
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#todo-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#todo-list li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Center the button underneath the input */
+    button {
+        align-self: center;
+    }
 }
