@@ -1,3 +1,5 @@
+// main.js
+
 // Log a message to the console
 console.log("HEEEEY");
 
@@ -155,8 +157,86 @@ function submitTodo() {
   }
 }
 
+// Function to toggle the completion status of a todo
+function toggleTodoCompletion(index) {
+  const existingTodos = fetchLocalTodos();
+  existingTodos[index].completed = !existingTodos[index].completed;
+  localStorage.setItem("todos", JSON.stringify(existingTodos));
+  displayLocalTodos();
+}
+
+// Function to apply filters based on completion status
+function applyFilters() {
+  const filterSelect = document.getElementById("filter");
+  const selectedFilter = filterSelect.value;
+
+  const localTodos = fetchLocalTodos();
+
+  switch (selectedFilter) {
+    case "completed":
+      displayFilteredTodos(localTodos.filter((todo) => todo.completed));
+      break;
+    case "pending":
+      displayFilteredTodos(localTodos.filter((todo) => !todo.completed));
+      break;
+    default:
+      displayFilteredTodos(localTodos);
+      break;
+  }
+}
+
+// Function to apply sorting based on user selection
+function applySort() {
+  const sortSelect = document.getElementById("sort");
+  const selectedSort = sortSelect.value;
+
+  const localTodos = fetchLocalTodos();
+
+  switch (selectedSort) {
+    case "alphabetical":
+      displayFilteredTodos(
+        localTodos.sort((a, b) => a.title.localeCompare(b.title))
+      );
+      break;
+    case "date":
+    default:
+      displayFilteredTodos(localTodos);
+      break;
+  }
+}
+
+// Function to display filtered and sorted todos
+function displayFilteredTodos(filteredTodos) {
+  todoListElement.innerHTML = ""; // Clear the existing content
+
+  filteredTodos.forEach((todo, index) => {
+    let listItem = document.createElement("li");
+    listItem.id = `todo-${index}`;
+    listItem.classList.add("todo-item");
+
+    listItem.innerHTML = `
+            <input type="checkbox" id="todo-checkbox-${index}" ${
+      todo.completed ? "checked" : ""
+    }>
+            <label for="todo-checkbox-${index}" class="todo-label">${
+      todo.title
+    }</label>
+            <button class="edit-button" onclick="editTodo(${index})">Edit</button>
+        `;
+
+    let deleteButton = createDeleteButton(index);
+    listItem.appendChild(deleteButton);
+
+    todoListElement.appendChild(listItem);
+
+    let checkbox = listItem.querySelector(`#todo-checkbox-${index}`);
+    checkbox.addEventListener("change", function () {
+      toggleTodoCompletion(index);
+    });
+  });
+}
+
 // Execute code when the DOMContentLoaded event is fired (when the page has finished loading)
 document.addEventListener("DOMContentLoaded", function () {
-  // Display local todos when the page loads
-  displayLocalTodos();
+  displayLocalTodos(); // Display local todos when the page loads
 });

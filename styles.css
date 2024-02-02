@@ -33,6 +33,7 @@ h1 {
 
 body .controls {
   display: inline-flex;
+  margin: 0 auto;
 }
 
 /* Style for the button */
