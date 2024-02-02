@@ -10,11 +10,13 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    display: column;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height of the viewport */
 }
 
 h1 {
-    color: rgb(76, 188, 233); 
+    color: rgb(76, 188, 233);
     background-color: rgb(87, 36, 0);
     margin-top: 0px; /* makes the list background color go to the top of the webpage*/
 }
@@ -32,10 +34,8 @@ h1 {
     padding: 5px;
 }
 
-
-
 body .controls {
-  display: inline-flex;
+    display: inline-flex;
 }
 
 /* Style for the button */
@@ -197,7 +197,10 @@ input[type="text"] {
 footer {
     background-color: rgb(87, 36, 0); /* Dark brown background color */
     color: white; /* White text color */
-    padding: 10px; /* Padding for better visual appeal */
+    padding: 20px; /* Increased padding for better visual appeal */
+    border-top-left-radius: 10px; /* Rounded corners for the top-left */
+    border-top-right-radius: 10px; /* Rounded corners for the top-right */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow for a subtle effect */
 }
 
 footer p {
@@ -211,4 +214,9 @@ footer a {
 
 footer a:hover {
     text-decoration: underline; /* Add underline on hover for links */
+}
+
+/* Ensure the footer stays at the bottom */
+body > footer {
+    margin-top: auto;
 }
