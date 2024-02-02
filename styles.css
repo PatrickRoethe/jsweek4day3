@@ -14,8 +14,9 @@ body {
 }
 
 h1 {
-    color: rgb(139, 69, 19); 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  
+    color: rgb(76, 188, 233); 
+    background-color: rgb(139, 69, 19);
+    margin-top: 0px; /* makes the list background color go to the top of the webpage*/
 }
 
 /* Filter and sort controls styles */
