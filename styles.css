@@ -192,3 +192,23 @@ input[type="text"] {
     background-color: #4da6ff; /* Darker blue on hover */
     transition: background-color 0.3s ease;
 }
+
+/* Footer styles */
+footer {
+    background-color: rgb(87, 36, 0); /* Dark brown background color */
+    color: white; /* White text color */
+    padding: 10px; /* Padding for better visual appeal */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for the paragraph */
+}
+
+footer a {
+    color: #4CAF50; /* Green color for links */
+    text-decoration: none; /* Remove underline for links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+}
