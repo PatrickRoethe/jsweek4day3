@@ -46,6 +46,10 @@ button {
     cursor: pointer; /* Cursor style on hover */
 }
 
+.add-button {
+    margin-top: 10px; /* Adjust the value to add more or less space */
+}
+
 /* Hover effect */
 button:hover {
     background-color: #45a049; /* Darker green on hover */
