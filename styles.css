@@ -14,8 +14,7 @@ body {
 }
 
 h1 {
-    color: #333;
-    
+    color: hsl(31, 91%, 26%);   
 }
 
 /* Filter and sort controls styles */
@@ -33,7 +32,6 @@ h1 {
 
 body .controls {
   display: inline-flex;
-  margin: 0 auto;
 }
 
 /* Style for the button */
