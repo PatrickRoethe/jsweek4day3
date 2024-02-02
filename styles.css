@@ -24,6 +24,8 @@ h1 {
 /* Filter and sort controls styles */
 .controls {
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center; /* Center the controls horizontally */
 }
 
 .controls label {
@@ -32,6 +34,7 @@ h1 {
 
 .controls select {
     padding: 5px;
+    margin-right: 10px; /* Add space between filter and sort controls */
 }
 
 body .controls {
