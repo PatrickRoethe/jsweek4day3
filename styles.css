@@ -122,6 +122,7 @@ input[type="text"] {
     border-radius: 3px; /* Rounded corners */
     cursor: pointer;
     outline: none; /* Remove the default focus outline */
+    margin-top: 15px;
 }
 
 /* Style for the checked state of the checkbox */
