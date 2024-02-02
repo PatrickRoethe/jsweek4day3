@@ -225,3 +225,53 @@ footer a:hover {
 body > footer {
     margin-top: auto;
 }
+
+/* Additional styles for improved user registration and login forms */
+.auth-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+#registration-form,
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 8px 0;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* New class for login and registration buttons */
+.auth-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Hover effect for the new class */
+.auth-button:hover {
+    background-color: #45a049;
+}

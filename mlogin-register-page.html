@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include your styles.css file -->
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: To Do List :::</title>
+</head>
+
+<body>
+    <h1>Login/ Register Page</h1>
+
+    <div id="login-register-section">
+        <!-- HTML form for user registration -->
+        <div class="auth-section">
+            <h2>Register</h2>
+            <form id="registration-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <button class="auth-button" type="button" onclick="registerUser()">Register</button>
+            </form>
+        </div>
+
+        <!-- HTML form for user login -->
+        <div class="auth-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="login-username">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password">
+                <button class="auth-button" type="button" onclick="loginUser()">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include your scripts -->
+    <script src="main.js"></script>
+    <script src="mappclearinput.js"></script>
+    <script src="mconfirmation.js"></script>
+    <script src="mkeyboardevents.js"></script>
+    <script src="medit.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your To-Do List App
+            Made in cooperation with ChatGPT
+        </p>
+    </footer>
+</body>
+
+</html>
