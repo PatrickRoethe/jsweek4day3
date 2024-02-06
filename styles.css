@@ -29,9 +29,6 @@ input[type="text"] {
     color: #999;
 }
 
-/* Add your styles here */
-
-/* Add your styles here */
 
 * {
     box-sizing: border-box;
@@ -146,6 +143,7 @@ input[type="text"] {
 #todo-list {
     list-style-type: none;
     padding: 0;
+    /* min-height: 100vh;  - pushed footer down*/ 
 }
 
 #todo-list li {
@@ -267,6 +265,7 @@ footer {
     border-top-left-radius: 25px; /* Rounded corners for the top-left */
     border-top-right-radius: 25px; /* Rounded corners for the top-right */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow for a subtle effect */
+    margin-top: auto; /* Corrected property for ensuring the footer stays at the bottom */
 }
 
 footer p {
@@ -285,6 +284,7 @@ footer a:hover {
 /* Ensure the footer stays at the bottom */
 body > footer {
     margin-top: auto;
+    position: bottom;
 }
 
 /* Additional styles for improved user registration and login forms */
@@ -335,4 +335,8 @@ input {
 /* Hover effect for the new class */
 .auth-button:hover {
     background-color: #45a049;
+}
+
+.main-content {
+    min-height: 100vh;
 }

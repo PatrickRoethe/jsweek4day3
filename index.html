@@ -14,34 +14,34 @@
         <h1><a href="index.html">LIST</a></h1>
         <h1><a href="idashboard.html">Dashboard</a></h1>
     </header>
+    <section class="main-content">
+        <!-- Filter and sort controls -->
+        <div class="controls">
+            <label for="filter">Filter:</label>
+            <select id="filter" onchange="applyFilters()">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
 
-    <!-- Filter and sort controls -->
-    <div class="controls">
-        <label for="filter">Filter:</label>
-        <select id="filter" onchange="applyFilters()">
-            <option value="all">All</option>
-            <option value="completed">Completed</option>
-            <option value="pending">Pending</option>
-        </select>
+            <label for="sort">Sort:</label>
+            <select id="sort" onchange="applySort()">
+                <option value="date">Date Added</option>
+                <option value="alphabetical">Alphabetical Order</option>
+            </select>
+        </div>
 
-        <label for="sort">Sort:</label>
-        <select id="sort" onchange="applySort()">
-            <option value="date">Date Added</option>
-            <option value="alphabetical">Alphabetical Order</option>
-        </select>
-    </div>
+        <!-- Add an element with the ID "todo-list" -->
+        <ul id="todo-list"></ul>
 
-    <!-- Add an element with the ID "todo-list" -->
-    <ul id="todo-list"></ul>
-
-    <!-- Form for submitting new to-do items -->
-    <form id="todo-form">
-        <label for="new-todo">New To-Do:</label>
-        <input type="text" id="new-todo" name="new-todo">
-        <!-- Fix the function name in the onclick attribute -->
-        <button type="button" class="add-button" onclick="submitTodo()">Add To-Do</button>
-    </form>
-
+        <!-- Form for submitting new to-do items -->
+        <form id="todo-form">
+            <label for="new-todo">New To-Do:</label>
+            <input type="text" id="new-todo" name="new-todo">
+            <!-- Fix the function name in the onclick attribute -->
+            <button type="button" class="add-button" onclick="submitTodo()">Add To-Do</button>
+        </form>
+    </section>
     <!-- Include your main.js script -->
     <script src="main.js"></script>
     <!-- Include the new todoFunctions.js script -->
