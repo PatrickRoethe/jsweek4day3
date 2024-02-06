@@ -340,3 +340,11 @@ input {
 .main-content {
     min-height: 100vh;
 }
+
+/* Media query for smaller resolutions */
+@media only screen and (max-width: 600px) {
+    .header a {
+        padding: 30px 20px; /* Adjust the padding for smaller resolutions */
+        font-size: 16px; /* Set a smaller font size */
+    }
+}
